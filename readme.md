@@ -1,5 +1,8 @@
 ## SpringBoot集成MongoDB
 
+>MongoTemplate演示demo：http://www.mydlq.club/article/85/ <br/>
+>Spring Data MongoDB官方文档：https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#preface
+
 ### 1. pom.xml中引入依赖
 
 ```xml
@@ -234,6 +237,29 @@ public class UserRepositoryTest {
 - mongodump -h dbhost -d dbname -c collection -q query -o dbdirectory：备份集合中的指定数据到指定目录。
 
 ### 16. spring-boot-starter-data-mongodb功能
+
+#### 17. 关于MySQL的回表查询
+
+- 回表查询是指在使用非主键索引查询时，需要通过主键索引再次查询的情况。
+- 回表查询会增加查询的成本，因为需要多次查询。
+
+##### 17.1. 回表查询的优化
+
+- 尽量使用主键索引查询。
+- 尽量使用覆盖索引查询。
+- 尽量使用索引覆盖扫描。
+
+#### 18. MongoTemplate的使用
+
+- MongoTemplate是Spring Data MongoDB提供的MongoDB操作模板类，它封装了大量的MongoDB操作方法，可以用于执行CRUD操作。
+- MongoTemplate提供了大量的CRUD操作方法，可以用于执行CRUD操作。
+- MongoTemplate提供了大量的聚合操作方法，可以用于执行聚合操作。
+- MongoTemplate提供了大量的地理空间操作方法，可以用于执行地理空间操作。
+- MongoTemplate提供了大量的MapReduce操作方法，可以用于执行MapReduce操作。
+- MongoTemplate提供了大量的GridFS操作方法，可以用于执行GridFS操作。
+- MongoTemplate提供了大量的索引操作方法，可以用于执行索引操作。
+- MongoTemplate提供了大量的命令操作方法，可以用于执行命令操作。
+- MongoTemplate提供了大量的事务操作方法，可以用于执行事务操作。
 
 
 
