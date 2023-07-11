@@ -1,7 +1,8 @@
 ## SpringBoot集成MongoDB
 
 >MongoTemplate演示demo：http://www.mydlq.club/article/85/ <br/>
->Spring Data MongoDB官方文档：https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#preface
+>Spring Data MongoDB官方文档：https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#preface <br/>
+>MongoDB官方文档：https://www.mongodb.com/docs/v4.4/tutorial/insert-documents/ <br/>
 
 ### 1. pom.xml中引入依赖
 

@@ -1,6 +1,5 @@
 package org.alvin.service;
 
-import org.alvin.pojo.User;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,15 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
-
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-class InsertServiceTest {
+class CreateIndexServiceTest {
 
     @Autowired
-    private InsertService insertService;
+    private CreateIndexService createIndexService;
 
     @BeforeEach
     void setUp() {
@@ -28,14 +26,28 @@ class InsertServiceTest {
     }
 
     @Test
-    void insert() {
-        User user = (User) insertService.insert();
-        System.out.println(user);
+    void createAscendingIndex() {
+          Object object =  createIndexService.createAscendingIndex();
+          System.out.println(object);
     }
 
     @Test
-    void insertMany() {
-        List<User> userList = (List<User>) insertService.insertMany();
-        System.out.println(userList);
+    void createDescendingIndex() {
+    }
+
+    @Test
+    void createCompositeIndex() {
+    }
+
+    @Test
+    void createTextIndex() {
+    }
+
+    @Test
+    void createUniqueIndex() {
+    }
+
+    @Test
+    void createPartialIndex() {
     }
 }
